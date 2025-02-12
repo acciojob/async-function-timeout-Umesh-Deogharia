@@ -7,16 +7,22 @@ const delay = document.querySelector("#delay");
 
 // const name = prompt("What is your name");
 // 	  const delay = prompt("What delay do you want");
-btn.addEventListener("submit", async()=>{
+
+function delay(ms) {
+	return new Promise(resolve=>setTimeout(resolve,ms));
+}
+btn.addEventListener("click", async()=>{
 	output.innerText="";
 	const message = text.value;
 	const delayTime = Number(delay.value);
-	async new Promise(res => res,delayTime)
-	output.innerText = ""
+	// async new Promise(res => setTimeout(res,delayTime));
+	await delay(delayTime);
+	output.innerText = message;
+	
 })
 
-if () {
+// if () {
 	
-}
+// }
 // 	prompt("");
 // 	prompt("");
