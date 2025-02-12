@@ -9,7 +9,10 @@ const delay = document.querySelector("#delay");
 // 	  const delay = prompt("What delay do you want");
 btn.addEventListener("submit", async()=>{
 	output.innerText="";
-	
+	const message = text.value;
+	const delayTime = Number(delay.value);
+	async new Promise(res => res,delayTime)
+	output.innerText = ""
 })
 
 if () {
