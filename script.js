@@ -8,7 +8,7 @@ const delay = document.querySelector("#delay");
 // const name = prompt("What is your name");
 // 	  const delay = prompt("What delay do you want");
 
-function delay(ms) {
+function wait(ms) {
 	return new Promise(resolve=>setTimeout(resolve,ms));
 }
 
@@ -16,6 +16,6 @@ btn.addEventListener("click", async()=>{
 	output.innerText="";
 	const message = text.value;
 	const delayTime = Number(delay.value);
-	await delay(delayTime);
+	await wait(delayTime);
 	output.innerText = message;
 });
